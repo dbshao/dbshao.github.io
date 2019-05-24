@@ -82,7 +82,7 @@
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Queen">
-<meta property="og:url" content="http://yourboys.org/tags/linux/index.html">
+<meta property="og:url" content="http://yourboys.org/tags/Linux/index.html">
 <meta property="og:site_name" content="Queen">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
@@ -116,13 +116,13 @@
 
 
 
-  <link rel="canonical" href="http://yourboys.org/tags/linux/">
+  <link rel="canonical" href="http://yourboys.org/tags/Linux/">
 
 
 
 
 
-  <title>标签: linux | Queen</title>
+  <title>标签: Linux | Queen</title>
   
 
 
@@ -294,7 +294,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>linux<small>标签</small>
+        <h1>Linux<small>标签</small>
         </h1>
       </div>
 
@@ -306,17 +306,121 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2019/03/31/caddy-aria2/" itemprop="url">
+            <a class="post-title-link" href="/2019/05/12/BT/" itemprop="url">
               
-                <span itemprop="name">安装aria2和图形界面的配置</span>
+                <span itemprop="name">Linux安装BT客户端</span>
               
             </a>
         
       </h2>
 
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-31T17:11:37+09:00" content="2019-03-31">
-          03-31
+        <time class="post-time" itemprop="dateCreated" datetime="2019-05-12T14:51:17+09:00" content="2019-05-12">
+          05-12
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2019/04/19/提取码/" itemprop="url">
+              
+                <span itemprop="name">快速查询百度网盘下载链接的提取码</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-04-19T23:31:35+09:00" content="2019-04-19">
+          04-19
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2019/04/14/gcp/" itemprop="url">
+              
+                <span itemprop="name">谷歌vps尝试</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-04-14T22:43:27+09:00" content="2019-04-14">
+          04-14
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2019/03/26/aria2/" itemprop="url">
+              
+                <span itemprop="name">Aria2+Caddy+Rclone+GDlist+Aria2Ng+Google Drive一键安装脚本</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-03-26T20:27:01+09:00" content="2019-03-26">
+          03-26
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2019/03/24/将Google网盘挂载到Linux服务器上/" itemprop="url">
+              
+                <span itemprop="name">将Google网盘挂载到Linux服务器上</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-03-24T01:22:27+09:00" content="2019-03-24">
+          03-24
         </time>
       </div>
 
@@ -451,7 +555,7 @@
         
         
           <li>
-            <a href="/2019/05/24/dream/" title="dream" target="_blank">dream</a>
+            <a href="/2019/05/24/dream/" title="男孩收藏博物馆" target="_blank">男孩收藏博物馆</a>
           </li>
         
           <li>
@@ -985,122 +1089,6 @@
                 searchResultList += result.item;
               })
               searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
-
-
-
-
-
-  
-
-  
-
-  
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-
-
-  
-  
-
-  
-
-  
-
-  
-
-
-  
-  <link rel="stylesheet" href="/lib/prettify/skins/atelier-dune-light.css" type="text/css">
-<script src="/lib/prettify/prettify.js" type="text/javascript"></script>
-<script type="text/javascript">
-  $(document).ready(function() {
-      $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
-      prettyPrint();
-  });
-</script>
-
-
- <!-- calendar widget -->
-
-
-    <script src="/lib/CloudCalendar/CloudCalendar.js"></script>
-    <script src="/lib/CloudCalendar/languages.js"></script>
-    <script type="text/javascript">
-    $(function() {
-        $('#CloudCalendar').aCalendar('zh-CN', 
-            $.extend(
-                '', {
-                    single:true,
-                    root:'/calendar/'
-                }
-            )
-        );
-    });
-    </script>
-
-
-
-</body>
-</html>
-ltList += "</ul>";
               resultContent.innerHTML = searchResultList;
             }
           }
